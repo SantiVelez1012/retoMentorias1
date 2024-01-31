@@ -7,6 +7,7 @@ const routes: Routes = [
   {
     path: '', pathMatch: 'full', component: PagesComponent,
     children: [
+      { path: '', redirectTo: 'feed', pathMatch: 'full' },
       { path: 'feed', component: FeedComponent }
     ]
   },

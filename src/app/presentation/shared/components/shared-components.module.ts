@@ -10,6 +10,9 @@ import { GameCardComponent } from './game-card/game-card.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    GameCardComponent
   ]
 })
 export class SharedComponentsModule { }
