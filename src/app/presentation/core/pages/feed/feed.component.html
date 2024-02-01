@@ -1,1 +1,41 @@
-<app-game-card></app-game-card>
+<main>
+    <h1 class="text-center my-5 text-3xl font-bold"> Free to play Games Info </h1>
+
+    <div class="flex-col m-5">
+        <section class="m-5">
+            <h3 class="text-xl"> Shooter </h3>
+        </section>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <div *ngFor="let game of shooterGames" class="col-span-1">
+                <app-game-card [gameInfo]="game"></app-game-card>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-col m-5">
+        <section class="m-5">
+            <h3 class="text-xl"> MMoRPG </h3>
+        </section>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <div *ngFor="let game of mmorpgGames" class="col-span-1">
+                <app-game-card [gameInfo]="game"></app-game-card>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-col m-5">
+        <section class="m-5">
+            <h3 class="text-xl"> PVP </h3>
+        </section>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <div *ngFor="let game of pvpGames" class="col-span-1">
+                <app-game-card [gameInfo]="game"></app-game-card>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</main>
+

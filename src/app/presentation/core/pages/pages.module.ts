@@ -4,6 +4,7 @@ import { FeedComponent } from './feed/feed.component';
 import { SharedComponentsModule } from '../../shared/components/shared-components.module';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,7 +16,8 @@ import { PagesRoutingModule } from './pages-routing.module';
   imports: [
     CommonModule,
     PagesRoutingModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    HttpClientModule
   ]
 })
 export class PagesModule { }

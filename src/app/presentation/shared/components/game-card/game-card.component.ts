@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { GameInformation } from '../../../../domain/model/structures/games/game.dto';
 
 @Component({
   selector: 'app-game-card',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './game-card.component.scss'
 })
 export class GameCardComponent {
+
+  @Input() gameInfo!: GameInformation;
+
+  constructor() {}
 
 }
