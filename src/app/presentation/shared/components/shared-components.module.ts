@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameCardComponent } from './game-card/game-card.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 
 @NgModule({
   declarations: [
-    GameCardComponent
+    GameCardComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule
   ],
   exports:[
-    GameCardComponent
+    GameCardComponent,
+    LoaderComponent
   ]
 })
 export class SharedComponentsModule { }

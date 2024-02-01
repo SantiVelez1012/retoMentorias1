@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { PagesModule } from './presentation/core/pages/pages.module';
 import { HttpProxyInterceptorService } from './presentation/shared/services/http-proxy-interceptor.service';
+import { SharedComponentsModule } from './presentation/shared/components/shared-components.module';
+import { configReducer } from './data/state/reducers/config.reducer';
 
 
 @NgModule({
@@ -17,8 +19,9 @@ import { HttpProxyInterceptorService } from './presentation/shared/services/http
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
-    PagesModule
+    StoreModule.forRoot({config: configReducer}, {}),
+    PagesModule,
+    SharedComponentsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpProxyInterceptorService, multi: true } 

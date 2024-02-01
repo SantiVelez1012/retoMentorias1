@@ -25,7 +25,6 @@ export class FeedComponent implements OnInit {
       this.shooterGames = response;
     });
 
-
     this.gamesApiService.getGamesByCategory('mmorpg').subscribe((response: any) => {
       response = response.slice(0, 4);
       this.mmorpgGames = response;
@@ -35,6 +34,7 @@ export class FeedComponent implements OnInit {
       response = response.slice(0, 4);
       this.pvpGames = response;
     });
+
   }
 
 }
