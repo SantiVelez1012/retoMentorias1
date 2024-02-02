@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameCardComponent } from './game-card/game-card.component';
 import { LoaderComponent } from './loader/loader.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,7 +12,8 @@ import { LoaderComponent } from './loader/loader.component';
     LoaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[
     GameCardComponent,

@@ -5,13 +5,15 @@ import { SharedComponentsModule } from '../../shared/components/shared-component
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { GameDetailsComponent } from './game-details/game-details.component';
 
 
 
 @NgModule({
   declarations: [
     FeedComponent,
-    PagesComponent
+    PagesComponent,
+    GameDetailsComponent
   ],
   imports: [
     CommonModule,

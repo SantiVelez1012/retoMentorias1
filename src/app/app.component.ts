@@ -13,11 +13,12 @@ export class AppComponent implements OnInit{
   isLoading!: boolean;
 
   title = 'retoQueue';
-  constructor( private store: Store ){}
+  constructor( private store: Store, private cd: ChangeDetectorRef ){}
   
   ngOnInit(){
     this.store.select(selectConfigState).subscribe((data:ConfigState) => {
       this.isLoading = data.isLoaderShown;
+      this.cd.detectChanges();
     });
   }
 }
