@@ -9,6 +9,7 @@ import { PagesModule } from './presentation/core/pages/pages.module';
 import { HttpProxyInterceptorService } from './presentation/shared/services/http-proxy-interceptor.service';
 import { SharedComponentsModule } from './presentation/shared/components/shared-components.module';
 import { configReducer } from './data/state/reducers/config.reducer';
+import { reducer } from './data/state/store.types';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { configReducer } from './data/state/reducers/config.reducer';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({config: configReducer}, {}),
+    StoreModule.forRoot({config: reducer}, {}),
     PagesModule,
     SharedComponentsModule
   ],
